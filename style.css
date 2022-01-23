@@ -1,0 +1,161 @@
+/*
+ Theme Name:   Twenty Twenty Child
+ Theme URI:    http://example.com/2020-child/
+ Description:  Twenty Twenty Child Theme
+ Author:       Max Yemets
+ Author URI:   http://example.com
+ Template:     twentytwenty
+ Version:      1.1.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  twentytwenty-child
+*/
+
+.main-container {
+    margin: 0.5em auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.gallery, .prods-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3em 0 3em -0.8em;
+    width: calc(100% + 1.6em);
+}
+
+.gallery-item {
+    margin: 0.8em 0;
+    padding: 0 0.8em;
+    width: 100%;
+    text-align: center;
+    max-width: 25%;
+}
+
+.gallery-item img {
+    margin: 0.5em auto;
+}
+
+.gallery-item a {
+    text-decoration: none;
+}
+
+.gallery-item h3 {
+    min-height: 2.4em;
+}
+.gallery-item h3 a,
+.gallery-item .price_row a {
+    color: #000;
+}
+
+.price_row span.sale {
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+    padding: 3px;
+    color: #FFF;
+    font-weight: bold;
+    background-color: #cd2653;
+    border: 2px solid #cd2653;
+}
+
+.product-page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-page h3, .single-product h3 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.product-page .gallery {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.single-product .gallery, .single-product .prods-gallery {
+    margin-top: 1em;
+}
+
+.single-product .prods-gallery h3{
+    margin-top: 0.3em;
+}
+
+.block-25 {
+    width: calc(25% - 1.0em);
+    margin: 1em 0.5em;
+}
+
+.block-75 {
+    width: calc(75% - 1.0em);
+    margin: 1em 0.5em;
+}
+
+.block-75 h1 {
+    margin-top: 0;
+}
+
+.youtube_block iframe {
+    width: 100%;
+    height: 42vw;
+    max-height: 490px;
+}
+
+.shortcode-example .gallery-item {
+    margin: 1.5em auto;
+    padding: 1em 0.8em;
+}
+
+.shortcode-example .gallery-item h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+    .main-container{
+        max-width: unset;
+    }
+    .prods-gallery .gallery-item, .shortcode-example .gallery-item {
+        max-width: 33%;
+    }
+}
+@media (max-width: 768px) {
+    .prods-gallery .gallery-item, .shortcode-example .gallery-item {
+        max-width: 50%;
+    }
+
+    .product-page {
+        display: block;
+    }
+
+    .block-25, .block-75 {
+        width: 95%;
+        margin: 1em auto;
+    }
+
+    .block-25 {
+        text-align: center;
+    }
+
+    .block-25 img {
+        margin: 1em auto;
+    }
+
+    .youtube_block iframe {
+        height: 56vw;
+    }
+
+    .gallery-item h3 {
+        min-height: unset;
+    }
+}
+
+@media (max-width: 600px) {
+    .prods-gallery .gallery-item, .shortcode-example .gallery-item {
+        max-width: unset;
+    }
+
+
+
+}
