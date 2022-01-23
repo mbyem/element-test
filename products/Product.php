@@ -55,7 +55,7 @@ class MProduct
                 'title',
                 'editor',
                 'thumbnail',
-                'custom-fields',
+                //'custom-fields', // comment to remove from classic editor view
             ],
             'taxonomies'          => [
                 'product_category',
