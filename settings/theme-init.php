@@ -39,14 +39,19 @@ class TChildDecorator
 
     public function decorateAdminBar()
     {
-        add_action('set_current_user', function () {
-            if (is_user_logged_in()) {
-                $user = wp_get_current_user();
-                if ($user->user_email === 'wptest@elementor.com') {
-                    show_admin_bar(FALSE);
-                }
+        add_action('set_current_user', [$this, '_hideAdminBar'], 999);
+        // added due to JetPack influence
+        add_action('init', [$this, '_hideAdminBar'], 999);
+    }
+
+    public function _hideAdminBar()
+    {
+        if (is_user_logged_in()) {
+            $user = wp_get_current_user();
+            if ($user->user_email === 'wptest@elementor.com') {
+                show_admin_bar(FALSE);
             }
-        });
+        }
     }
 }
 
